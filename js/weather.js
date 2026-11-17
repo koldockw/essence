@@ -27,7 +27,6 @@
     const valid = entry => entry && Number.isFinite(entry.temperature) && entry.temperature > -90 && entry.temperature < 65 && Number.isFinite(entry.code) && Number.isFinite(entry.savedAt);
     function display(entry, stale = false) {
       const temperature = entry.temperature;
-      const family = temperature < 12 ? 'Amber' : temperature > 23 ? 'Fresh' : 'Floral';
       const recommendation = temperature < 12 ? E.product('jazz-club') : temperature > 23 ? E.product('bleu-de-chanel') : E.product('jadore');
       const title = temperature < 12 ? 'A little warmth.' : temperature > 23 ? 'Keep it fresh.' : 'Something luminous.';
       const text = temperature < 12 ? 'Cold air, a warm signature. Explore tobacco, vanilla and soft woods for today’s scent ritual.' : temperature > 23 ? 'A bright, aromatic fragrance is a lovely companion for a warmer day. Try fresh woods and an easy touch.' : 'A gentle day calls for a little light. Explore floral notes and a warm, graceful finish.';

@@ -92,3 +92,21 @@ test('A failed refresh can show a clearly labelled recent weather reading',async
  await new Promise(resolve=>setImmediate(resolve)); assert.match(result.innerHTML,/Saved reading/);
  assert.match(result.innerHTML,/Live update unavailable/); assert.match(result.innerHTML,/5°C/);
 });
+
+test('A guest scent discovery moves into an account',()=>{
+ const {E,store}=app();const account={id:'q',name:'Demo Member',email:'member@example.test'};
+ E.storage.set(E.scoped('quiz'),{answers:['Woody','evening','soft'],savedAt:1000});
+ E.storage.set('essence.users',[account]);E.signIn(account);
+ assert.equal(E.storage.get(E.scoped('quiz'),null).answers[0],'Woody');assert.equal(store.getItem('essence.quiz.guest'),null);
+});
+test('A newer account scent discovery survives login',()=>{
+ const {E}=app();const account={id:'q',name:'Demo Member',email:'member@example.test'};E.storage.set('essence.users',[account]);
+ E.storage.set('essence.quiz.q',{answers:['Floral','gift','bold'],savedAt:2000});E.storage.set('essence.quiz.guest',{answers:['Woody','evening','soft'],savedAt:1000});
+ E.signIn(account);assert.equal(E.storage.get(E.scoped('quiz'),null).answers[0],'Floral');
+});
+test('Inline errors clear through the declared accessibility relationship',()=>{
+ const {E,ctx}=app();const error={textContent:'Old error'};let invalid;
+ ctx.document.getElementById=id=>id==='newsletter-error'?error:null;
+ E.setError({id:'newsletter-email',getAttribute:()=> 'newsletter-hint newsletter-error',setAttribute:(key,value)=>{if(key==='aria-invalid')invalid=value;}},'');
+ assert.equal(error.textContent,'');assert.equal(invalid,'false');
+});

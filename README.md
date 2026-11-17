@@ -119,3 +119,16 @@ tests/core.test.cjs
 ```
 
 Orders, points, subscriptions and contact messages are local simulations. No payment is accepted, no product is shipped, and no email is sent. There are no fabricated customer reviews or stock claims.
+
+
+## Updated presentation and submission requirements
+
+The supplied updated presentation guideline requires a maximum of five minutes. The revised two-person script in `docs/DEFENSE_GUIDE.md` targets **4:45**. Rehearse at 4:30-5:00 and keep the final 15-second buffer. No live code editing is needed. Use backup screenshots from the separately delivered submission ZIP if connectivity fails.
+
+Each student must submit these three separate files together to Moodle's **FINAL EXAM FOLDER**:
+
+1. `ESSENCE_SE2509_FinalProject.zip`
+2. `ESSENCE_SE2509_Report.pdf`
+3. `ESSENCE_SE2509_Links.txt`
+
+See `docs/SUBMISSION_CHECKLIST.md`. The PDF report and TXT links file are separate deliverables; a README does not replace them. The final archive includes a backup_screenshots folder. Updated verification includes nineteen automated checks, including text-token contrast, local page/image links, forbidden form attributes, guest scent-result migration and inline error clearing.

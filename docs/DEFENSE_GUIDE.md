@@ -1,93 +1,59 @@
-# ESSENCE: защита проекта
+# ESSENCE: защита на 4:45
 
-Команда: **Manyakina Yuliya, Bazarbayev Bakdaulet, SE-2509**.
+Manyakina Yuliya, Bazarbayev Bakdaulet. Группа SE-2509, Astana IT University.
 
 Сайт: https://koldockw.github.io/essence/
 Код: https://github.com/koldockw/essence
 
-## Перед защитой
+Обновлённый лимит: максимум 5 минут. Цель: 4:45. За каждые лишние 30 секунд снимают 2 балла. Не используйте старый сценарий на 7 минут. PPTX в требованиях не указан: показывайте готовый сайт в браузере. Код во время защиты не редактируйте.
 
-1. Открой сайт в обычном окне браузера. Проверь интернет для погодного API.
-2. Подготовь DevTools: Application → Local storage. Не очищай данные после создания аккаунта, если собираешься показывать сохранение.
-3. Подготовь выдуманные данные, например Demo Student, demo.student@example.test, +7 707 123 45 67. Используй отдельный учебный пароль, который соответствует подсказке.
-4. Уменьши масштаб страницы только если проектор требует; для показа адаптивности используй режим устройств DevTools.
-5. Открой README и файлы JS во второй вкладке. Сначала показывай работу сайта, потом код.
+## Подготовка
 
-## Демонстрация примерно на 7 минут
+1. Откройте главную страницу, каталог, аккаунт и Find your scent в отдельных вкладках. Проверьте интернет.
+2. Зарегистрируйте отдельный учебный аккаунт для репетиции. Для самой защиты подготовьте другой уникальный email, чтобы показать новую регистрацию без ошибки дубликата. Не используйте настоящие пароли.
+3. Во вкладке регистрации заранее заполните имя, email, пароль и подтверждение. В телефон временно введите 123, чтобы на защите показать ошибку, затем замените на корректный пример +7 707 123 45 67. Такая подготовка формы не требует изменения кода.
+4. Корзина для демонстрации: Jazz Club 30 ml. Перед первым показом WELCOME10 у этого аккаунта не должно быть завершённых заказов. Если код уже использован, покажите ESSENCE15 с товаром на 75 000 ₸ или больше.
+5. Резервные изображения лежат в папке backup_screenshots внутри итогового ZIP. При сбое интернета показывайте их и честно говорите, что это заранее сделанные скриншоты.
+6. Отрепетируйте вместе минимум два раза с секундомером. Не пытайтесь объяснять каждую функцию. Оставьте 15 секунд до лимита.
 
-| Время | Кто | Что сделать и сказать |
+## Порядок показа и текст B1
+
+| Время | Кто | Действия и реплики |
 | --- | --- | --- |
-| 0:00–0:40 | Юлия | Главная: тема, аудитория, меню. “Our project is ESSENCE, a fragrance concept store. It helps people choose a perfume by notes, mood and bottle size.” |
-| 0:40–1:20 | Юлия | Показать каталог и товар. Выбрать объём, увидеть новую цену. “We use real product photos and real bottle sizes. Prices in tenge are demo data.” |
-| 1:20–1:55 | Юлия | Переключить тёмную тему, перейти на другую страницу, затем показать мобильное меню. “The selected theme is saved in localStorage and stays the same on every page. CSS Grid, Flexbox and media queries make the layout responsive.” |
-| 1:55–2:50 | Бакдаулет | Открыть Create account. Отправить пустую форму, показать ошибки. Затем зарегистрироваться с учебными данными. “All validation is written in JavaScript. Every form uses novalidate. The password needs uppercase and lowercase letters, a number and a symbol.” |
-| 2:50–3:25 | Бакдаулет | Профиль, выход, повторный вход. “The account is stored locally. We hash the password with PBKDF2 and compare the hash during login. The session contains a user ID and an expiry time.” |
-| 3:25–4:10 | Бакдаулет | В каталоге найти vanilla, поменять семейство, показать пустое состояние и Reset. Сохранить аромат сердцем, проверить профиль. “Search and filters update the product list immediately. Saved fragrances and filter choices remain after reload.” |
-| 4:10–5:10 | Юлия | Offers → скопировать WELCOME10. Добавить Jazz Club 30 ml в корзину. Применить код. Цена 42 000, скидка 4 200, доставка 2 000, итого 39 800 ₸. “The code is copied to the clipboard. The bag checks the conditions and calculates the real demo discount.” |
-| 5:10–5:55 | Бакдаулет | Заполнить демо-оформление примерным адресом. Завершить, скачать чек, показать заказ в профиле. “This is a simulated checkout. We do not collect payment details or ship products. The order is saved in the active account.” |
-| 5:55–6:35 | Бакдаулет | Find your scent: пройти три шага. Показать погодный блок, сменить город и Refresh. “We call Open-Meteo with fetch and async/await. The page shows loading, handles failures and suggests a fragrance direction from the temperature.” |
-| 6:35–7:00 | Юлия | Контакты и FAQ, файлы проекта, ссылки на сайт и код. “Each feature supports the same purpose: discovering a fragrance and keeping a personal collection. We have ten connected pages.” |
+| 0:00-0:30 | Юлия, затем Бакдаулет | Юлия: “Hello. I am Manyakina Yuliya.” Бакдаулет: “I am Bazarbayev Bakdaulet. We are from group SE-2509.” Юлия: “Our project is ESSENCE, a fragrance concept store. Our goal is to help people choose a perfume by notes, mood and bottle size. Our target users want a personal and simple shopping experience.” |
+| 0:30-1:10 | Юлия | Главная, desktop/tablet/mobile в DevTools, мобильное меню, тёмная тема и переход в каталог. “Our design uses warm neutral colours, green accents and real product photos. Grid, Flexbox and media queries adapt the layout. The theme is saved in localStorage and stays the same on every page.” Покажите hover кнопки и карточки. |
+| 1:10-2:00 | Бакдаулет | Подготовленная регистрация: отправить, показать ошибку телефона, исправить, создать аккаунт и открыть профиль. Если укладываетесь, выйти и войти ещё раз. “Validation is written in JavaScript. Forms use novalidate. We check required fields, email, phone and password complexity. The account is stored locally. Passwords are saved as salted PBKDF2 hashes. The profile shows the saved user details.” |
+| 2:00-2:40 | Бакдаулет | Каталог: поиск vanilla, Reset, семейство, сердце, объём 30/100 ml. “Search and filters update immediately. We can save a fragrance, choose a real bottle size and see its price. The bag and saved collection remain after reload.” |
+| 2:40-3:20 | Юлия | Offers: скопировать WELCOME10, корзина с Jazz Club 30 ml, применить код. “Promo codes are copied to the clipboard and checked in the bag. The fragrance costs 42,000 tenge. The discount is 4,200 and demo delivery is 2,000. The total is 39,800 tenge. Checkout is a simulation and does not take money.” Не тратьте время на ввод полного адреса: оформление показано в отчёте. |
+| 3:20-4:10 | Бакдаулет | Find your scent: три выбора, результат. Погодный блок: сменить город, показать загрузку и рекомендацию. “The scent finder saves our choices. We also call the public Open-Meteo API with fetch and async/await. It returns temperature and a weather code. We use temperature for a fragrance suggestion. We show loading, a retry button and an error message if the request fails.” |
+| 4:10-4:30 | Юлия | Контакты, FAQ и профиль с избранным. “The pages are connected and each feature supports fragrance discovery. A visitor can return to a saved collection, an order or a previous scent-finder result.” |
+| 4:30-4:45 | Юлия | “Our strengths are a complete discovery flow, a consistent design and working local features. In the future, we would add a backend, synchronised accounts and real shop inventory. Thank you for your attention.” |
 
-Подстройте длительность под лимит преподавателя. Если времени мало, оставьте регистрацию, поиск, промокод и API.
+## Если остаётся мало времени
 
-## Где искать код
+После 4:10 сразу переходите к заключению. К 4:45 завершите основные слова. Вопросы преподавателя слушайте после заключения. Не добавляйте новые функции в показ в последний момент.
 
-| Функция | Файл | Ключевой элемент |
-| --- | --- | --- |
-| Данные товаров, объёмы, цены | `js/products.js` | `ESSENCE_PRODUCTS`, `sizes`, `notes` |
-| Общие функции и localStorage | `js/common.js` | `storage`, `scoped`, `getCart`, `getFavorites` |
-| Регистрация и вход | `js/auth.js` | submit signup/login, `hashPassword`, `signIn` |
-| Сложность пароля, email, телефон | `js/common.js` | `validators`, `validate`, `setError` |
-| Профиль и история заказов | `js/profile.js` | `fillDetails`, `renderOrders`, `showTab` |
-| Поиск и фильтры | `js/catalog.js` | `state`, `render` |
-| Выбор объёма товара | `js/product.js` | `data-detail-size`, обновление `detail-price` |
-| Корзина и промокоды | `js/cart.js`, `js/common.js` | `render`, `checkPromo`, `totals` |
-| Погодный API | `js/weather.js` | `load`, `fetch`, `AbortController`, `display` |
-| Подбор аромата | `js/discover.js` | `steps`, `answers`, `showResults` |
-| Светлая и тёмная темы | `css/style.css`, `js/common.js` | CSS variables, `applyTheme` |
-| Адаптивность | `css/style.css` | Grid/Flexbox, media queries 1150/900/700/370 px |
-| Контактная форма | `js/contact.js` | `validate`, сохранение сообщения |
+## Где находится код
 
-## Короткие ответы на вопросы
+| Возможность | Файл и функция |
+| --- | --- |
+| Товары, реальные объёмы, демо-цены | js/products.js, ESSENCE_PRODUCTS |
+| localStorage, валидация, пароли | js/common.js: storage, validate, validators, hashPassword |
+| Регистрация и вход | js/auth.js: обработчики submit |
+| Профиль и заказы | js/profile.js: fillDetails, renderOrders |
+| Поиск и фильтры | js/catalog.js: state, render |
+| Объём и цена | js/product.js: data-detail-size |
+| Промокоды и суммы | js/common.js: checkPromo, totals; js/cart.js |
+| API, загрузка и ошибки | js/weather.js: load, display |
+| Подбор аромата | js/discover.js: steps, showResults |
+| Адаптивность и темы | css/style.css: переменные и media queries |
 
-**Почему localStorage?**
-The assignment does not require a backend. localStorage keeps the demo data after page reload and between pages on the same origin.
+## Короткие ответы
 
-**Почему пароль не виден в localStorage?**
-We store a salted password hash instead of the plain password. During login, we hash the entered value with the same salt and compare the results.
-
-**Это безопасная настоящая авторизация?**
-No. This is a frontend simulation. Users can change local browser data. A real store needs a backend and server-side authentication.
-
-**Что такое salt?**
-A random value added to the password-hashing process. Two accounts with the same password get different stored hashes.
-
-**Как открывается профиль?**
-Login saves the session and redirects to profile.html. The profile script checks the session. Without it, the page redirects to the login form.
-
-**Как работает API?**
-The browser sends the selected city coordinates to Open-Meteo. We read current temperature and weather code from JSON, then update the weather card and the recommendation.
-
-**Что если API не работает?**
-The request times out after twelve seconds. We show a labelled recent saved reading if one exists. Otherwise we show an error and a Refresh button. The catalogue still works.
-
-**Почему нет required и type=email?**
-The task asks us to validate in JavaScript. We use novalidate and show our own error messages next to the fields.
-
-**Что сохраняется после обновления?**
-Theme, accounts, session, cart, favourites, demo orders, quiz choices, filters, subscription and weather cache. Data stays in the current browser.
-
-**Зачем клиенту возвращаться?**
-Their saved collection, scent direction, order history and bag are still there. They can reorder a favourite, explore a new mood or use another offer.
-
-**Как считается скидка?**
-We calculate the fragrance subtotal, validate one promo code, subtract its discount and add delivery. Delivery thresholds use the subtotal before discounts.
-
-**Почему цены не с API?**
-Prices are stable demo data for the project. Weather is the live integration. We do not claim that these are actual current retail prices.
-
-**Как работает подбор аромата?**
-It gives points for the selected family, occasion and desired presence. Products are sorted by score. This is a transparent rule-based recommendation, not an AI model.
-
-**Почему фотографии в SVG?**
-The SVG contains the downloaded photograph as embedded WebP data. The photos are real. The wrapper lets the text-based repository upload keep every image self-contained.
+- **Why localStorage?** The assignment has no backend. It keeps data after reload on the same browser and origin.
+- **Why a hash?** We compare password hashes and avoid saving the plain password. A salt makes hashes different between accounts.
+- **Is this real authentication?** It is a frontend simulation. Production authentication needs a backend.
+- **How does the API fit the topic?** Temperature selects a warm, fresh or floral fragrance direction. This is a simple editorial rule.
+- **What if the API fails?** We show a recent labelled saved reading or an error with Refresh. We do not invent weather.
+- **What makes a visitor return?** A saved bag, favourites, scent-finder choices, demo history and working offers.
+- **What must each student submit?** The ZIP, PDF report and TXT links file together in Moodle, in the FINAL EXAM FOLDER.

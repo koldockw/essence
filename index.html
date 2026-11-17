@@ -1,110 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>ESSENCE</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<meta name="description" content="Discover your next signature fragrance. Explore real fragrances, find your scent and build a personal collection at ESSENCE.">
+<meta name="color-scheme" content="light dark">
+<title>Find your signature | ESSENCE</title>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('essence.theme')||'light'}catch(e){document.documentElement.dataset.theme='light'}document.documentElement.classList.add('js');</script><link rel="stylesheet" href="css/style.css">
+<script src="js/products.js" defer></script><script src="js/common.js" defer></script><script src="js/weather.js" defer></script><script src="js/home.js" defer></script>
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-
-        <a class="navbar-brand" href="index.html">ESSENCE</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="perfumes.html">Perfumes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contanct.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-</nav>
-<div class="hero">
+<body data-page="index">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="announcement">
+<span>A little welcome, on us. <strong>10% off your first order.</strong></span><button type="button" data-copy="WELCOME10" class="announcement-code">WELCOME10 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"></rect><path d="M16 8V3H3v13h5"></path></svg></button>
+</div>
+<header class="site-header"><div class="nav-shell">
+<a class="wordmark" href="index.html" aria-label="ESSENCE home">ESSENCE<span>THE FRAGRANCE EDIT</span></a><nav id="primary-nav" aria-label="Main navigation"><a href="perfumes.html">Collection</a><a href="discover.html">Find your scent</a><a href="offers.html">Offers</a><a href="about.html">Our story</a><a href="contact.html">Contact</a></nav><div class="nav-actions">
+<a class="icon-button desktop-search" href="perfumes.html#catalog-search" aria-label="Search fragrances"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg></a><button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z"></path></svg></button><a class="icon-button wishlist-link" href="perfumes.html?saved=1" aria-label="Your saved fragrances"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"></path></svg><span data-favorite-count class="tiny-count" hidden></span></a><a class="icon-button" id="account-link" href="account.html" aria-label="Your account"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21v-2a8 8 0 0 1 16 0v2"></path></svg></a><a class="icon-button bag-link" href="cart.html" aria-label="Shopping bag"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span data-cart-count class="tiny-count" hidden></span></a><button id="menu-toggle" class="icon-button menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+</div>
+</div></header><main id="main"><section class="hero"><div class="hero-copy">
+<span class="eyebrow"><span class="small-dot"></span> AN EVERYDAY KIND OF EXTRAORDINARY</span><h1>A scent.<br>A feeling.<br><em>Entirely you.</em>
+</h1>
+<p>For the little rituals and the unforgettable moments. Find a fragrance that feels like coming home to yourself.</p>
+<div class="hero-buttons">
+<a class="button" href="perfumes.html">Explore the collection<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></a><a class="text-link" href="discover.html">Find my scent<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></a>
+</div>
+<div class="hero-footnote">
+<span class="line"></span>Thoughtfully selected. Beautifully personal.</div>
+</div>
+<div class="hero-image">
+<img src="images/hero.svg" alt="Chanel perfume photographed with rich red roses" fetchpriority="high"><div class="image-caption">
+<span>THE ESSENCE EDIT / 01</span><p>Some things<br>stay with you.</p>
+<a href="perfumes.html" class="round-link" aria-label="Explore the fragrance edit"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></a>
+</div>
+</div>
+<div class="hero-side-note">A SIGNATURE IS A FEELING, NOT A RULE.</div></section>
+<section class="service-strip" aria-label="Our shopping experience"><div>
+<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 3c-9-1-16 3-16 10a7 7 0 0 0 7 7C18 20 21 12 20 3Z"></path><path d="m4 21 11-11"></path></svg><span>Notes worth knowing<small>Clear fragrance stories</small></span>
+</div>
 <div>
-<h1>ESSENCE</h1>
-<p>Discover luxury fragrances</p>
-<a class="btn btn-light btn-lg mt-3" href="perfumes.html">Shop Now</a>
+<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span>Your bottle, your size<small>From 30 to 150 ml</small></span>
+</div>
+<div>
+<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h18v4H3zM5 12v9h14v-9M12 8v13"></path><path d="M12 8C4 8 5 1 9 3c2 1 3 5 3 5Zm0 0c8 0 7-7 3-5-2 1-3 5-3 5Z"></path></svg><span>A little something extra<small>Offers you can actually use</small></span>
+</div>
+<div>
+<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"></path></svg><span>Keep what you love<small>A collection that stays with you</small></span>
+</div></section>
+<section class="section container"><div class="section-heading">
+<div>
+<span class="eyebrow">THE CONSIDERED COLLECTION</span><h2>Meet your next <em>signature.</em>
+</h2>
+</div>
+<a class="text-link" href="perfumes.html">Shop all fragrances<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></a>
+</div>
+<div id="featured-products" class="product-grid home-grid" aria-label="Selected fragrances"><div class="loading-placeholder">Preparing the collection…</div></div>
+<noscript>Please enable JavaScript to shop the collection.</noscript></section>
+<section class="scent-story container"><div class="story-image">
+<img src="images/ritual.svg" alt="A golden Chanel perfume bottle in natural daylight" loading="lazy"><span class="image-label">THE EVERYDAY RITUAL</span>
+</div>
+<div class="story-copy">
+<span class="eyebrow">LESS GUESSING. MORE FEELING.</span><h2>Your fragrance.<br><em>Your kind of day.</em>
+</h2>
+<p>Fresh and effortless? Warm and a little mysterious? You don’t need to know every note. Start with how you want to feel.</p>
+<div class="note-chips">
+<a href="perfumes.html?family=Fresh">Fresh &amp; clean</a><a href="perfumes.html?family=Woody">Warm &amp; woody</a><a href="perfumes.html?family=Floral">Soft &amp; floral</a>
+</div>
+<a class="button" href="discover.html">Take the scent finder<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></a>
+</div></section>
+<section class="section container weather-section"><div class="section-heading">
+<div>
+<span class="eyebrow">A SCENT FOR RIGHT NOW</span><h2>Dress for the weather.<br><em>So can your fragrance.</em>
+</h2>
+</div>
+<p class="heading-note">A live weather check, a little scent inspiration.<br>Choose a city to see today’s edit.</p>
+</div>
+<div class="weather-widget" data-weather-widget>
+<div class="weather-controls">
+<label for="weather-city">Your city</label><select id="weather-city" data-weather-city><option value="astana">Astana</option>
+<option value="almaty">Almaty</option>
+<option value="oral">Oral</option>
+<option value="shymkent">Shymkent</option></select><button class="text-link" type="button" data-weather-retry>Refresh <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></button>
+</div>
+<div class="weather-result" data-weather-result role="status" aria-live="polite">Checking today’s weather…</div>
+</div></section>
+<section class="offer-banner container"><div>
+<span class="eyebrow">YOUR FIRST LITTLE EXTRA</span><h2>A warm welcome.<br><em>10% less.</em>
+</h2>
+<p>Make your first discovery a little sweeter.</p>
+</div>
+<div class="offer-banner-action">
+<button type="button" class="coupon-copy" data-copy="WELCOME10">WELCOME10 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"></rect><path d="M16 8V3H3v13h5"></path></svg></button><span>Copy the code. Add it to your bag.</span><a href="offers.html" class="text-link">See all offers <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></a>
+</div></section><section class="newsletter-section"><div>
+<span class="eyebrow">LET’S STAY CLOSE</span><h2>Good scents. Better inbox.</h2>
+<p>Save your email for collection updates and a welcome treat.</p>
+</div>
+<div class="newsletter-form-wrap">
+<form class="newsletter-form" novalidate>
+<label class="sr-only" for="newsletter-email">Email address</label><div class="newsletter-input">
+<input id="newsletter-email" name="email" type="text" inputmode="email" autocomplete="email" placeholder="Your email address" aria-describedby="newsletter-error"><button type="submit" aria-label="Join the ESSENCE list"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></button>
+</div>
+<span id="newsletter-error" class="field-error" aria-live="polite"></span><p class="form-status" role="status"></p>
+</form>
+<small>A little inspiration. Your subscription is saved for this demo.</small>
+</div></section></main><footer class="site-footer"><div class="footer-top">
+<div class="footer-brand">
+<a class="wordmark" href="index.html">ESSENCE</a><p>Not just a fragrance.<br>A feeling you come back to.</p>
+</div>
+<div>
+<h3>Explore</h3>
+<a href="perfumes.html">The collection</a><a href="discover.html">Find your scent</a><a href="offers.html">Little extras</a>
+</div>
+<div>
+<h3>Here for you</h3>
+<a href="about.html">Our story</a><a href="contact.html">Contact &amp; FAQs</a><a href="profile.html">My account</a>
+</div>
+<div class="footer-project">
+<h3>Made with intention</h3>
+<p>Manyakina Yuliya<br>Bazarbayev Bakdaulet<br>SE-2509 · Astana IT University</p>
 </div>
 </div>
-
-<div class="container py-5">
-
-<h2 class="text-center mb-4">Featured Collection</h2>
-
-<div id="carouselExample" class="carousel slide mb-5">
-
-<div class="carousel-inner">
-
-<div class="carousel-item active">
-<img class="d-block w-100 rounded" src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=1400">
-</div>
-
-<div class="carousel-item">
-<img class="d-block w-100 rounded" src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=1400">
-</div>
-
-<div class="carousel-item">
-<img class="d-block w-100 rounded" src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=1400">
-</div>
-
-</div>
-
-<button class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-<span class="carousel-control-prev-icon"></span>
-</button>
-
-<button class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-<span class="carousel-control-next-icon"></span>
-</button>
-
-</div>
-
-<div class="row g-4">
-
-<div class="col-sm-12 col-lg-6">
-<div class="p-4 bg-light rounded h-100">
-<h3>Premium Quality</h3>
-<p>Original designer fragrances with elegant presentation.</p>
-</div>
-</div>
-
-<div class="col-sm-12 col-lg-6">
-<div class="p-4 bg-light rounded h-100">
-<h3>Fast Delivery</h3>
-<p>Secure shipping with careful packaging.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-
-Bakdaulet Bazarbayev | Yuliya Manyakin | SE-2509
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
+<div class="footer-bottom">
+<span>© 2026 ESSENCE. A university concept store.</span><span>Demo prices &amp; orders. No payments are processed.</span><a href="https://github.com/koldockw/essence" target="_blank" rel="noopener">View project ↗</a>
+</div></footer><div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+<button id="back-top" class="back-top icon-button" type="button" aria-label="Back to top" hidden><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></button>
 </body>
 </html>

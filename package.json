@@ -1,0 +1,8 @@
+{
+  "name": "essence-final-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-page responsive fragrance concept store. SE-2509, Astana IT University.",
+  "scripts": { "build": "node scripts/build.mjs", "test": "node --test tests/core.test.cjs" },
+  "engines": { "node": ">=18" }
+}

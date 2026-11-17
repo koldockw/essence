@@ -1,0 +1,20 @@
+'use strict';
+(() => {
+  const E = window.Essence;
+  const p = E.product(new URLSearchParams(location.search).get('id'));
+  const container = document.getElementById('product-details');
+  if (!p) { container.innerHTML = E.empty('This scent has wandered off.', 'That fragrance isn’t part of our edit. Your next favourite is waiting in the collection.'); E.renderCards(document.getElementById('related-products'), E.products.slice(0, 4)); return; }
+  document.title = `${p.name} | ESSENCE`;
+  let ml = p.sizes[0].ml;
+  container.innerHTML = `<p class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="perfumes.html">The collection</a><span>/</span>${p.name}</p><div class="product-detail-grid"><div class="detail-photo"><img src="${p.image}" alt="${p.brand} ${p.name} fragrance bottle" width="700" height="800"><span>${p.label}</span></div><div class="detail-copy"><span class="eyebrow">${p.brand}</span><h1>${p.name}</h1><p class="detail-subtitle">${p.type} · ${p.gender}</p><p class="detail-description">${p.description}</p><div class="note-chips">${p.notes.map(note => `<span class="note-chip">${note}</span>`).join('')}</div><p class="detail-family">${p.family} family · ${p.mood}</p><span class="detail-volume-label">Choose your bottle size</span><div class="detail-sizes" role="group" aria-label="Bottle size">${p.sizes.map((size, i) => `<button type="button" class="size-chip" data-detail-size="${size.ml}" aria-pressed="${i === 0}">${size.ml} ml</button>`).join('')}</div><div class="detail-price" id="detail-price" aria-live="polite">${E.money(p.sizes[0].price)}</div><div class="detail-actions"><button type="button" class="button" id="detail-add" data-add-id="${p.id}" data-add-size="${ml}" aria-label="Add ${E.escape(p.name)}, ${ml} ml to bag">Add to my bag ${E.icon('bag')}</button><button type="button" class="icon-button" data-favorite-id="${p.id}" aria-pressed="false" aria-label="Save fragrance">${E.icon('heart')}</button></div><div class="detail-promises"><span>${E.icon('check')}Your size, clearly priced</span><span>${E.icon('heart')}Save it for later</span></div><div class="detail-accordion"><details><summary>A little about this bottle</summary><p>The listed volumes are available formats of this fragrance. The photograph represents the product; bottle proportions can vary by size.</p><p><a href="${p.source}" target="_blank" rel="noopener">Explore the original brand’s product information ↗</a></p></details><details><summary>Delivery & your order</summary><p>Demo delivery is 2,000 ₸, free on a subtotal of 80,000 ₸ or more. This university concept store simulates checkout and never processes a payment.</p></details><details><summary>Wear it your way</summary><p>Fragrance is personal. Try it on your skin and let it settle before deciding. How a scent develops varies with the wearer and the environment.</p></details></div></div></div><section class="note-pyramid"><div><span class="eyebrow">THE SCENT STORY</span><h2>From first note<br>to <em>lasting feeling.</em></h2></div><div><h3>THE OPENING</h3><p>${p.top}</p></div><div><h3>THE HEART</h3><p>${p.heart}</p></div><div><h3>THE FINISH</h3><p>${p.base}</p></div></section>`;
+  container.addEventListener('click', e => {
+    const sizeButton = e.target.closest('[data-detail-size]');
+    if (!sizeButton) return;
+    ml = Number(sizeButton.dataset.detailSize);
+    container.querySelectorAll('[data-detail-size]').forEach(b => b.setAttribute('aria-pressed', String(b === sizeButton)));
+    document.getElementById('detail-price').textContent = E.money(p.sizes.find(size => size.ml === ml).price);
+    const add = document.getElementById('detail-add'); add.dataset.addSize = String(ml); add.setAttribute('aria-label', `Add ${p.name}, ${ml} ml to bag`);
+  });
+  E.renderCards(document.getElementById('related-products'), [...E.products.filter(item => item.id !== p.id && item.family === p.family), ...E.products.filter(item => item.id !== p.id && item.family !== p.family)].slice(0, 4));
+  E.updateBadges();
+})();

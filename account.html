@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Discover your next signature fragrance. Explore real fragrances, find your scent and build a personal collection at ESSENCE.">
+<meta name="color-scheme" content="light dark">
+<title>Your account | ESSENCE</title>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('essence.theme')||'light'}catch(e){document.documentElement.dataset.theme='light'}document.documentElement.classList.add('js');</script><link rel="stylesheet" href="css/style.css">
+<script src="js/products.js" defer></script><script src="js/common.js" defer></script><script src="js/auth.js" defer></script>
+</head>
+<body data-page="account">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="announcement">
+<span>A little welcome, on us. <strong>10% off your first order.</strong></span><button type="button" data-copy="WELCOME10" class="announcement-code">WELCOME10 <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"></rect><path d="M16 8V3H3v13h5"></path></svg></button>
+</div>
+<header class="site-header"><div class="nav-shell">
+<a class="wordmark" href="index.html" aria-label="ESSENCE home">ESSENCE<span>THE FRAGRANCE EDIT</span></a><nav id="primary-nav" aria-label="Main navigation"><a href="perfumes.html">Collection</a><a href="discover.html">Find your scent</a><a href="offers.html">Offers</a><a href="about.html">Our story</a><a href="contact.html">Contact</a></nav><div class="nav-actions">
+<a class="icon-button desktop-search" href="perfumes.html#catalog-search" aria-label="Search fragrances"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg></a><button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z"></path></svg></button><a class="icon-button wishlist-link" href="perfumes.html?saved=1" aria-label="Your saved fragrances"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"></path></svg><span data-favorite-count class="tiny-count" hidden></span></a><a class="icon-button" id="account-link" href="account.html" aria-label="Your account"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21v-2a8 8 0 0 1 16 0v2"></path></svg></a><a class="icon-button bag-link" href="cart.html" aria-label="Shopping bag"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span data-cart-count class="tiny-count" hidden></span></a><button id="menu-toggle" class="icon-button menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+</div>
+</div></header><main id="main"><section class="account-layout container"><div class="account-image">
+<img src="images/hero.svg" alt="A perfume bottle and roses" loading="lazy"><div>
+<span class="eyebrow">A SPACE THAT FEELS LIKE YOU</span><h1>Your scents.<br>Your rituals.<br><em>Your ESSENCE.</em>
+</h1>
+<p>Save the ones you love. Find your next favourite. Come back whenever the mood calls.</p>
+</div>
+</div>
+<div class="account-panel">
+<a href="index.html" class="small-link">← Back to the edit</a><div class="auth-tabs" role="tablist" aria-label="Account access">
+<button id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-panel">Log in</button><button id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-panel" tabindex="-1">Create account</button>
+</div>
+<div id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+<span class="eyebrow">GOOD TO SEE YOU AGAIN</span><h2>Welcome <em>back.</em>
+</h2>
+<p class="muted">Your personal collection is waiting.</p>
+<form id="login-form" novalidate>
+<div class="field">
+<label for="login-email">Email address</label><input id="login-email" name="email" type="text" autocomplete="email" aria-describedby="login-email-hint login-email-error" inputmode="email"><small class="field-hint" id="login-email-hint"></small><span class="field-error" id="login-email-error" aria-live="polite"></span>
+</div>
+<div class="field">
+<label for="login-password">Password</label><div class="password-wrap">
+<input id="login-password" name="password" type="password" autocomplete="current-password" aria-describedby="login-password-hint login-password-error"><button type="button" class="password-toggle" data-password="login-password" aria-label="Show password" aria-pressed="false">Show</button>
+</div>
+<small class="field-hint" id="login-password-hint"></small><span class="field-error" id="login-password-error" aria-live="polite"></span>
+</div>
+<div class="form-status" role="status"></div>
+<button type="submit" class="button full-width">Back to my collection <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></button>
+</form>
+<p class="auth-switch">New here? <button type="button" data-auth-tab="signup" class="small-link">Make yourself at home</button></p>
+</div>
+<div id="signup-panel" role="tabpanel" aria-labelledby="signup-tab" hidden>
+<span class="eyebrow">MAKE YOURSELF AT HOME</span><h2>A little space<br><em>for you.</em>
+</h2>
+<form id="signup-form" novalidate>
+<div class="field">
+<label for="signup-name">Your name</label><input id="signup-name" name="name" type="text" autocomplete="name" aria-describedby="signup-name-hint signup-name-error"><small class="field-hint" id="signup-name-hint"></small><span class="field-error" id="signup-name-error" aria-live="polite"></span>
+</div>
+<div class="field">
+<label for="signup-email">Email address</label><input id="signup-email" name="email" type="text" autocomplete="email" aria-describedby="signup-email-hint signup-email-error" inputmode="email"><small class="field-hint" id="signup-email-hint"></small><span class="field-error" id="signup-email-error" aria-live="polite"></span>
+</div>
+<div class="field">
+<label for="signup-phone">Phone number</label><input id="signup-phone" name="phone" type="tel" autocomplete="phone" aria-describedby="signup-phone-hint signup-phone-error" inputmode="tel"><small class="field-hint" id="signup-phone-hint">+7 and 10 digits, or a Kazakhstan number starting with 8.</small><span class="field-error" id="signup-phone-error" aria-live="polite"></span>
+</div>
+<div class="field">
+<label for="signup-password">Create a password</label><div class="password-wrap">
+<input id="signup-password" name="password" type="password" autocomplete="new-password" aria-describedby="signup-password-hint signup-password-error"><button type="button" class="password-toggle" data-password="signup-password" aria-label="Show password" aria-pressed="false">Show</button>
+</div>
+<small class="field-hint" id="signup-password-hint">8+ characters, with uppercase, lowercase, number and symbol.</small><span class="field-error" id="signup-password-error" aria-live="polite"></span>
+</div>
+<div class="field">
+<label for="signup-confirm">Confirm password</label><div class="password-wrap">
+<input id="signup-confirm" name="confirm" type="password" autocomplete="new-password" aria-describedby="signup-confirm-hint signup-confirm-error"><button type="button" class="password-toggle" data-password="signup-confirm" aria-label="Show password" aria-pressed="false">Show</button>
+</div>
+<small class="field-hint" id="signup-confirm-hint"></small><span class="field-error" id="signup-confirm-error" aria-live="polite"></span>
+</div>
+<div class="form-status" role="status"></div>
+<button type="submit" class="button full-width">Create my account <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></button>
+</form>
+</div>
+<p class="form-note account-note">Student demo. Details are stored in this browser. Use a password you don’t use elsewhere.</p>
+</div></section></main><footer class="site-footer"><div class="footer-top">
+<div class="footer-brand">
+<a class="wordmark" href="index.html">ESSENCE</a><p>Not just a fragrance.<br>A feeling you come back to.</p>
+</div>
+<div>
+<h3>Explore</h3>
+<a href="perfumes.html">The collection</a><a href="discover.html">Find your scent</a><a href="offers.html">Little extras</a>
+</div>
+<div>
+<h3>Here for you</h3>
+<a href="about.html">Our story</a><a href="contact.html">Contact &amp; FAQs</a><a href="profile.html">My account</a>
+</div>
+<div class="footer-project">
+<h3>Made with intention</h3>
+<p>Manyakina Yuliya<br>Bazarbayev Bakdaulet<br>SE-2509 · Astana IT University</p>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 ESSENCE. A university concept store.</span><span>Demo prices &amp; orders. No payments are processed.</span><a href="https://github.com/koldockw/essence" target="_blank" rel="noopener">View project ↗</a>
+</div></footer><div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+<button id="back-top" class="back-top icon-button" type="button" aria-label="Back to top" hidden><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></button>
+</body>
+</html>

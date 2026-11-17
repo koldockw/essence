@@ -1,0 +1,12 @@
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const out = path.join(root, 'dist');
+if (existsSync(out)) rmSync(out, { recursive: true });
+mkdirSync(out);
+for (const file of readdirSync(root).filter(file => file.endsWith('.html'))) cpSync(path.join(root, file), path.join(out, file));
+for (const folder of ['css', 'js']) cpSync(path.join(root, folder), path.join(out, folder), { recursive: true });
+mkdirSync(path.join(out, 'images'));
+for (const file of readdirSync(path.join(root, 'images')).filter(file => file.endsWith('.svg'))) cpSync(path.join(root, 'images', file), path.join(out, 'images', file));
+console.log('Built dist/ with all pages and self-contained photographic assets.');

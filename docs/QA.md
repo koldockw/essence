@@ -4,7 +4,7 @@ Date: 17 November 2026. Tests use invented demo data only.
 
 ## Automated checks
 
-`npm test`: 12/12 checks passed. The checks cover independent bottle variants, subtotal arithmetic, corrupt storage, quantity limits, all three coupon rules, threshold recalculation, first-order eligibility, guest migration, account isolation, session expiry, email/phone/password validation, PBKDF2 password matching, HTML escaping, API failure and a labelled stale-weather fallback.
+`npm test`: 19/19 checks passed in the updated audit. The original twelve checks remain in place, with seven additional regression and site-contract checks. The checks cover independent bottle variants, subtotal arithmetic, corrupt storage, quantity limits, all three coupon rules, threshold recalculation, first-order eligibility, guest migration, account isolation, session expiry, email/phone/password validation, PBKDF2 password matching, HTML escaping, API failure and a labelled stale-weather fallback.
 
 Every JavaScript file passed `node --check`. All real HTML forms include `novalidate`. A source scan found no forbidden HTML validation attributes, duplicate IDs or broken local page/script/style links. Product image paths were checked against the actual image folder.
 

@@ -130,7 +130,9 @@
   };
   function setError(input, message) {
     input.setAttribute('aria-invalid', message ? 'true' : 'false');
-    const error = document.getElementById(`${input.id}-error`);
+    // Follow the field's declared error relationship, including newsletter and promo fields.
+    const errorId = (input.getAttribute('aria-describedby') || '').split(/\s+/).find(id => id.endsWith('-error'));
+    const error = document.getElementById(errorId || `${input.id}-error`);
     if (error) error.textContent = message;
   }
   function validate(form, rules) {
@@ -161,6 +163,7 @@
     // Merge the guest bag and saved collection once, then keep each account isolated.
     const guestCart = getCart();
     const guestFavorites = getFavorites();
+    const guestQuiz = storage.get(scoped('quiz'), null);
     storage.set('essence.session', { userId: account.id, expires: Date.now() + 7 * 86400000 });
     if (guestCart.length) {
       const bag = getCart();
@@ -175,6 +178,14 @@
     if (guestFavorites.length) {
       storage.set(scoped('favorites'), [...new Set([...getFavorites(), ...guestFavorites])]);
       storage.remove('essence.favorites.guest');
+    }
+    // Carry a guest's latest scent discovery into their account without replacing a newer one.
+    const options = [['Fresh', 'Floral', 'Woody', 'Amber'], ['everyday', 'evening', 'gift'], ['soft', 'bold']];
+    const validQuiz = quiz => quiz && Array.isArray(quiz.answers) && quiz.answers.length === 3 && Number.isFinite(quiz.savedAt) && quiz.answers.every((answer, i) => options[i].includes(answer));
+    if (validQuiz(guestQuiz)) {
+      const accountQuiz = storage.get(scoped('quiz'), null);
+      if (!validQuiz(accountQuiz) || guestQuiz.savedAt > accountQuiz.savedAt) storage.set(scoped('quiz'), guestQuiz);
+      storage.remove('essence.quiz.guest');
     }
     updateBadges();
   }

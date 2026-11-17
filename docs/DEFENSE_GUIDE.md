@@ -16,18 +16,20 @@ Manyakina Yuliya, Bazarbayev Bakdaulet. Группа SE-2509, Astana IT Universi
 5. Резервные изображения лежат в папке backup_screenshots внутри итогового ZIP. При сбое интернета показывайте их и честно говорите, что это заранее сделанные скриншоты.
 6. Отрепетируйте вместе минимум два раза с секундомером. Не пытайтесь объяснять каждую функцию. Оставьте 15 секунд до лимита.
 
+Английские реплики ниже: примерно 214 слов. Остальное время отведено на действия в браузере и короткие паузы.
+
 ## Порядок показа и текст B1
 
 | Время | Кто | Действия и реплики |
 | --- | --- | --- |
-| 0:00-0:30 | Юлия, затем Бакдаулет | Юлия: “Hello. I am Manyakina Yuliya.” Бакдаулет: “I am Bazarbayev Bakdaulet. We are from group SE-2509.” Юлия: “Our project is ESSENCE, a fragrance concept store. Our goal is to help people choose a perfume by notes, mood and bottle size. Our target users want a personal and simple shopping experience.” |
-| 0:30-1:10 | Юлия | Главная, desktop/tablet/mobile в DevTools, мобильное меню, тёмная тема и переход в каталог. “Our design uses warm neutral colours, green accents and real product photos. Grid, Flexbox and media queries adapt the layout. The theme is saved in localStorage and stays the same on every page.” Покажите hover кнопки и карточки. |
-| 1:10-2:00 | Бакдаулет | Подготовленная регистрация: отправить, показать ошибку телефона, исправить, создать аккаунт и открыть профиль. Если укладываетесь, выйти и войти ещё раз. “Validation is written in JavaScript. Forms use novalidate. We check required fields, email, phone and password complexity. The account is stored locally. Passwords are saved as salted PBKDF2 hashes. The profile shows the saved user details.” |
-| 2:00-2:40 | Бакдаулет | Каталог: поиск vanilla, Reset, семейство, сердце, объём 30/100 ml. “Search and filters update immediately. We can save a fragrance, choose a real bottle size and see its price. The bag and saved collection remain after reload.” |
-| 2:40-3:20 | Юлия | Offers: скопировать WELCOME10, корзина с Jazz Club 30 ml, применить код. “Promo codes are copied to the clipboard and checked in the bag. The fragrance costs 42,000 tenge. The discount is 4,200 and demo delivery is 2,000. The total is 39,800 tenge. Checkout is a simulation and does not take money.” Не тратьте время на ввод полного адреса: оформление показано в отчёте. |
-| 3:20-4:10 | Бакдаулет | Find your scent: три выбора, результат. Погодный блок: сменить город, показать загрузку и рекомендацию. “The scent finder saves our choices. We also call the public Open-Meteo API with fetch and async/await. It returns temperature and a weather code. We use temperature for a fragrance suggestion. We show loading, a retry button and an error message if the request fails.” |
-| 4:10-4:30 | Юлия | Контакты, FAQ и профиль с избранным. “The pages are connected and each feature supports fragrance discovery. A visitor can return to a saved collection, an order or a previous scent-finder result.” |
-| 4:30-4:45 | Юлия | “Our strengths are a complete discovery flow, a consistent design and working local features. In the future, we would add a backend, synchronised accounts and real shop inventory. Thank you for your attention.” |
+| 0:00-0:30 | Юлия, затем Бакдаулет | Юлия: “Hello. I am Manyakina Yuliya.” Бакдаулет: “I am Bazarbayev Bakdaulet, from SE-2509.” Юлия: “ESSENCE is a perfume concept store. We help people find fragrances by notes, mood and bottle size. Our users want simple, personal shopping.” |
+| 0:30-1:10 | Юлия | Главная, desktop/tablet/mobile в DevTools, мобильное меню, тёмная тема и переход в каталог. “We use real photos, neutral colours and green accents. Grid, Flexbox and media queries adapt the layout. Both themes stay consistent between pages through localStorage.” Покажите hover кнопки. |
+| 1:10-2:00 | Бакдаулет | Подготовленная регистрация: отправить, показать ошибку телефона, исправить, создать аккаунт и открыть профиль. Если успеваете, выйти и войти ещё раз. “JavaScript checks the fields and shows inline errors. We use novalidate. Registration saves the account locally. Passwords use salted hashes. Login opens a profile with saved user details.” |
+| 2:00-2:40 | Бакдаулет | Поиск vanilla, Reset, фильтр, сердце и объём 30/100 ml. “Search and filters update immediately. A heart saves a fragrance. Different bottle sizes have different prices. The bag and favourites stay after reload.” |
+| 2:40-3:20 | Юлия | Offers: скопировать WELCOME10, открыть подготовленную корзину с Jazz Club 30 ml и применить код. “Copy a code, then apply it in the bag. WELCOME10 gives ten percent off the first demo order. The total updates immediately. No real payment is taken.” На экране: 42 000 - 4 200 + 2 000 = 39 800 ₸. Полный адрес не вводите: оформление показано в отчёте. |
+| 3:20-4:10 | Бакдаулет | Find your scent: три выбора и результат. Погодный блок: сменить город и показать загрузку/рекомендацию. “The scent finder saves our choices. Open-Meteo returns live temperature and a weather code. We use them for a scent suggestion. Loading, errors and retry are handled, so the page stays useful if the request fails.” |
+| 4:10-4:30 | Юлия | Контакты, FAQ и сохранённая коллекция. “The pages work together. Visitors can return to a saved collection, a previous choice or their demo order history.” |
+| 4:30-4:45 | Юлия | “Our strengths are personal discovery and consistent design. Next, we would add a backend and real inventory. Thank you for your attention.” |
 
 ## Если остаётся мало времени
 

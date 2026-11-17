@@ -11,6 +11,7 @@
     state.search = query.get('q') || '';
     state.family = query.get('family') || '';
     state.gender = query.get('gender') || '';
+    state.price = query.get('price') || '';
     state.saved = query.get('saved') === '1';
     state.sort = query.get('sort') || 'featured';
   }
@@ -48,6 +49,7 @@
       if (state.search) params.set('q', state.search);
       if (state.family) params.set('family', state.family);
       if (state.gender) params.set('gender', state.gender);
+      if (state.price) params.set('price', state.price);
       if (state.saved) params.set('saved', '1');
       if (state.sort !== 'featured') params.set('sort', state.sort);
       history.replaceState(null, '', `${location.pathname}${params.size ? `?${params}` : ''}${location.hash}`);

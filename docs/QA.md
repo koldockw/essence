@@ -35,3 +35,12 @@ The temporary responsive QA pages are excluded from the final build.
 This is an educational browser-local simulation. It does not test a backend, real email delivery, payment processing or shipping because those are not part of the implementation. Local source checks do not guarantee third-party APIs or brand pages will remain available forever. Photos used in the storefront are local embedded assets.
 
 Publication verification is completed against the final GitHub Pages deployment separately.
+
+
+## Updated PDF-guideline audit, 17 November 2026
+
+The supplied presentation PDF adds three separate Moodle files, exact file naming, an individual submission requirement, screenshot/video backup and a strict five-minute presentation. The original seven-minute guide and ZIP-only delivery were insufficient for these additional submission conditions. The defense guide now targets 4:45; a separate PDF report and TXT links file are delivered under the required ESSENCE_SE2509 names. Both students must upload all three files individually.
+
+The code recheck added seven contract/regression checks, for a total of 19 passing tests. Light-theme muted text changed from #72756d to #60665d: its contrast on the sage surface increased from about 3.81:1 to 4.80:1. Main and muted text tokens now exceed 4.5:1 on all five tested light/dark surfaces. This token check is not a claim that every photographic overlay is WCAG-certified.
+
+Inline errors now clear using aria-describedby, including newsletter and promo fields. A guest scent-finder result moves into the account on login, while a newer account result is preserved. No authentication backend or real purchase processing has been introduced.
